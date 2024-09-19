@@ -56,38 +56,25 @@ This may take a few minutes, depending on your internet speed.
 
 ## How to Open and Run the App
 
-### 1. Start the App as a Desktop Application
+### 1. Start the App
 
-This app is built with **Electron**, so you can run it like any other desktop app. Once everything is installed, simply run the following command:
-
-```bash
-npm run electron
-```
-
-This will open the app in an **Electron window**, and you'll be able to use it as a desktop application.
-
----
-
-## Alternative: Run in Browser (React App Only)
-
-If you don't want to open it as a desktop app and just want to view it in a browser, you can start the app in development mode (in your browser). To do this, run:
+You need two terminals open. First run react and then electron. To run react type:
 
 ```bash
 npm start
 ```
 
-- This will open the app in your default web browser.
-- The app will be running at `http://localhost:3000/`. You can open your browser and visit that address to see the app in action.
+then run electron:
+
+```bash
+npm run electron
+```
 
 ---
 
 ## Troubleshooting
 
-### 1. Node.js not installed?
-
-If you see an error about `node` or `npm` not being recognized, make sure Node.js is installed by visiting [Node.js](https://nodejs.org/). After installation, restart your terminal.
-
-### 2. Missing dependencies or errors?
+### Missing dependencies or errors?
 
 If you see errors when running `npm install`, try deleting the `node_modules` folder (if it exists) and run `npm install` again:
 
@@ -108,13 +95,3 @@ npm install
 - **package.json**: This file contains the list of all the packages (dependencies) the app needs.
 
 ---
-
-## Contributing
-
-If you’d like to improve the app or fix any bugs, feel free to open a pull request or submit issues on GitHub. Contributions are welcome!
-
----
-
-## License
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
