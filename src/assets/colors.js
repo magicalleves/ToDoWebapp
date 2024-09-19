@@ -1,4 +1,3 @@
-// src/assets/colors.js
 export const colors = {
     background: '#F5F5F5',
     sidebar: '#353535',

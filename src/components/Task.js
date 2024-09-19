@@ -1,11 +1,17 @@
 // src/components/Task.js
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion'; // Import motion
 import { colors } from '../assets/colors';
 
 const Task = ({ title }) => {
   return (
-    <TaskContainer>
+    <TaskContainer
+      as={motion.div} // Use motion.div for drag
+      drag // Enable dragging
+      whileHover={{ scale: 1.03 }} // Add a hover effect
+      whileTap={{ scale: 0.98 }}   // Add a tap effect
+    >
       <TaskTitle>{title}</TaskTitle>
       <TaskDue>Due Tomorrow</TaskDue>
     </TaskContainer>
