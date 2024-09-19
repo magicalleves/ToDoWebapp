@@ -1,5 +1,6 @@
 // src/components/OnboardingScreen.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import glassBackgroundImage from '../assets/background.png';
 import screenBackgroundImage from '../assets/bgdark.jpg';
@@ -9,6 +10,7 @@ const OnboardingScreen = () => {
   const [step, setStep] = useState(1);
   const [theme, setTheme] = useState('dark');
   const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
 
   const handleNext = () => {
     if (step < 5) {
@@ -18,6 +20,11 @@ const OnboardingScreen = () => {
 
   const handleImageSelect = (image) => {
     setSelectedImage(image);
+  };
+
+  // In the last step, navigate to the Main Page
+  const handleFinish = () => {
+    navigate('/main');
   };
 
   return (
@@ -106,7 +113,7 @@ const OnboardingScreen = () => {
         <GlassPanel>
           <Title>You are all set! Enjoy using your space</Title>
           <Subtitle>You can further customize your space in settings</Subtitle>
-          <StartButton onClick={() => alert('Navigate to the space')}>
+          <StartButton onClick={handleFinish}>
             Go to your Space
             <ArrowIcon>→</ArrowIcon>
           </StartButton>
@@ -117,6 +124,9 @@ const OnboardingScreen = () => {
 };
 
 export default OnboardingScreen;
+
+// ... (rest of the styled components remain unchanged)
+
 
 const OnboardingContainer = styled.div`
   height: 100vh;

@@ -1,23 +1,16 @@
-// src/App.js
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import OnboardingScreen from './components/OnboardingScreen';
+import MainPage from './components/MainPage';
 
 function App() {
-  const [showOnboarding, setShowOnboarding] = useState(true);
-
-  const handleNext = () => {
-    setShowOnboarding(false);
-  };
-
   return (
-    <div>
-      {showOnboarding ? (
-        <OnboardingScreen onNext={handleNext} />
-      ) : (
-        // Main content of your app goes here
-        <h1>Main App Screen</h1>
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<OnboardingScreen />} />
+        <Route path="/main" element={<MainPage />} />
+      </Routes>
+    </Router>
   );
 }
 
