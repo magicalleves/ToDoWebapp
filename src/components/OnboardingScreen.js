@@ -226,7 +226,7 @@ const ThemeContainer = styled.div`
   margin-bottom: 30px;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 12px;
-  border-radius: 18px;
+  border-radius: 16px;
 `;
 
 const ToggleButtonContainer = styled.div`
@@ -237,7 +237,7 @@ const ToggleButtonContainer = styled.div`
 const ToggleButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: ${(props) =>
     props.isSelected ? '#E6E6E6' : 'transparent'};
   color: ${(props) =>
