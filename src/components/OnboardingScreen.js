@@ -224,17 +224,20 @@ const Icon = styled.img`
 
 const ThemeContainer = styled.div`
   margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 18px;
 `;
 
 const ToggleButtonContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const ToggleButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: ${(props) =>
     props.isSelected ? '#E6E6E6' : 'transparent'};
   color: ${(props) =>
